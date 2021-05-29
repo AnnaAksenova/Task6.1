@@ -10,13 +10,12 @@ public class StatsService<number, returne> {
     }
 
     public long calculateAverageSum(long[] sales) {
-        long sum = 0;
-        int[] myArray = new int[12];
-        for (long sale : sales) {
-            sum += sale;
+       long average = 0;
+            long sum = calculateSum(sales);
+            average = sum / sales.length;
+            return average;
         }
-        return sum / myArray.length;
-    }
+        
 
     public int minSales(long[] sales) {
         int minMonth = 0;
